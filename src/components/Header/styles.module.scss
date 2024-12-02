@@ -1,6 +1,8 @@
 @import 'styles/colors.scss';
 
 .header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   padding: 24px 50px;
