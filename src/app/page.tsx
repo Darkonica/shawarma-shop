@@ -1,44 +1,9 @@
-import { ProductItem } from "@/components/index";
+import { ProductsContainer } from "@/components/index";
 
 export default function Page() {
   return (
     <div>
-      <ProductItem
-        title="Двойная шаверма"
-        image="/images/shawarma.jpg"
-        description="Состав: Курица , свежий огурец, помидоры, морковь по-корейски, капуста салатная или капуста квашеная, красный лук, наш фирменный соус. 440гр."
-        price="360"
-      />
-      <ProductItem
-        title="Двойная шаверма"
-        image="/images/shawarma.jpg"
-        description="Состав: Курица , свежий огурец, помидоры, морковь по-корейски, капуста салатная или капуста квашеная, красный лук, наш фирменный соус. 440гр."
-        price="360"
-      />
-      <ProductItem
-        title="Двойная шаверма"
-        image="/images/shawarma.jpg"
-        description="Состав: Курица , свежий огурец, помидоры, морковь по-корейски, капуста салатная или капуста квашеная, красный лук, наш фирменный соус. 440гр."
-        price="360"
-      />
-      <ProductItem
-        title="Двойная шаверма"
-        image="/images/shawarma.jpg"
-        description="Состав: Курица , свежий огурец, помидоры, морковь по-корейски, капуста салатная или капуста квашеная, красный лук, наш фирменный соус. 440гр."
-        price="360"
-      />
-      <ProductItem
-        title="Двойная шаверма"
-        image="/images/shawarma.jpg"
-        description="Состав: Курица , свежий огурец, помидоры, морковь по-корейски, капуста салатная или капуста квашеная, красный лук, наш фирменный соус. 440гр."
-        price="360"
-      />
-      <ProductItem
-        title="Двойная шаверма"
-        image="/images/shawarma.jpg"
-        description="Состав: Курица , свежий огурец, помидоры, морковь по-корейски, капуста салатная или капуста квашеная, красный лук, наш фирменный соус. 440гр."
-        price="360"
-      />
+      <ProductsContainer />
     </div>
   )
 }

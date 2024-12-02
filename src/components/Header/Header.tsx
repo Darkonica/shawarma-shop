@@ -1,6 +1,8 @@
+import styles from './styles.module.scss';
+
 export const Header = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <div className="logo">
         Shawarma shop
       </div>

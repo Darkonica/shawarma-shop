@@ -1,5 +1,8 @@
 import { Header, Footer } from '@/components/index';
 
+import 'normalize.css';
+import '@/styles/base.scss';
+
 export default function RootLayout({
   children,
 }: {

@@ -1,0 +1,9 @@
+@import 'styles/colors.scss';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 50px;
+  color: $text-color-light;
+  background-color: $background-color;
+}
