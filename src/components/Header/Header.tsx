@@ -1,18 +1,21 @@
+import Link from 'next/link';
 import styles from './styles.module.scss';
 
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <div className="logo">
+      <Link
+        href="/"
+        className={styles.logo}
+      >
         Shawarma shop
-      </div>
-      <menu>
-        <li>Меню</li>
-        <li>Доставка</li>
-        <li>О нас</li>
-        <li>Контакты</li>
-        <li>Корзина</li>
-      </menu>
+      </Link>
+      <nav>
+        <Link href="/delivery">Доставка</Link>
+        <Link href="/about">О нас</Link>
+        <Link href="/contacts">Контакты</Link>
+        <Link href="/cart">Корзина</Link>
+      </nav>
     </header>
   )
 }
