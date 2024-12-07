@@ -10,15 +10,9 @@
   color: $text-color-light;
   background-color: $background-color;
 
-  a {
-    font-weight: 700;
-    color: $text-color-light;
-    margin-right: 24px;
-    text-decoration: none;
-
-    &:hover, &.active {
-      color: $primary-color;
-      transition: color linear 0.1s;
+  nav {
+    & > button {
+      margin-left: 15px;
     }
   }
 }

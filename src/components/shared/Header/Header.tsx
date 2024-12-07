@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { LogIn, ShoppingCart } from 'lucide-react';
+import { Button } from '@/components/ui';
 
 import styles from './styles.module.scss';
 
@@ -11,7 +13,16 @@ export const Header = () => {
       >
         Shawarma shop
       </Link>
-      <Link href="/cart">Корзина</Link>
+
+      <nav>
+        <Button>
+          <LogIn size={20} />
+          Войти
+        </Button>
+        <Button>
+          <ShoppingCart size={20} /> Корзина
+        </Button>
+      </nav>
     </header>
   )
 }
