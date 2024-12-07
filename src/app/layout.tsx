@@ -1,4 +1,4 @@
-import { Header, Footer } from '@/components/index';
+import { Header, Footer } from '@/components/shared/index';
 
 import 'normalize.css';
 import '@/styles/base.scss';

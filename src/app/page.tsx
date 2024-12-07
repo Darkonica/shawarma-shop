@@ -1,4 +1,4 @@
-import { ProductsContainer } from "@/components/index";
+import { ProductsContainer } from "@/components/shared/index";
 
 export default function Page() {
   return (
