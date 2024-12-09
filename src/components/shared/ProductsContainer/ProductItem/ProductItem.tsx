@@ -9,7 +9,7 @@ export const ProductItem = ({ title, image, description, price }) => {
       <div className={styles.description}>{description}</div>
 
       <div className={styles.priceCont}>
-        <div className={styles.price}>{price}₽</div>
+        <div className={styles.price}>{price} ₽</div>
         <button className={styles.cart}>В корзину</button>
       </div>
     </div>

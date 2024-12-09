@@ -20,7 +20,7 @@ export const Header = () => {
           Войти
         </Button>
         <Button>
-          <ShoppingCart size={20} /> Корзина
+          <ShoppingCart size={20} />
         </Button>
       </nav>
     </header>
