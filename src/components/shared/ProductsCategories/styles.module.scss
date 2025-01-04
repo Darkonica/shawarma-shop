@@ -1,5 +1,11 @@
 @import 'styles/_colors.scss';
 
+.container {
+  position: sticky;
+  top: 93px;
+  background-color: #FFF;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 24px auto;
