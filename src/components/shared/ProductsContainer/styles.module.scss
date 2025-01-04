@@ -1,7 +1,11 @@
-.productsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.wrapper {
   max-width: 1200px;
   margin: 36px auto 24px;
+}
+
+.productsContainer {
+  width: 100%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
 }

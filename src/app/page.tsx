@@ -9,7 +9,26 @@ export default function Page() {
   return (
     <div>
       <ProductsCategories />
-      <ProductsContainer />
+      <ProductsContainer
+        anchor="new-items"
+        title="Новинки"
+      />
+      <ProductsContainer
+        anchor="shawerma"
+        title="Шаверма"
+      />
+      <ProductsContainer
+        anchor="snacks"
+        title="Закуски"
+      />
+      <ProductsContainer
+        anchor="sauces"
+        title="Соусы"
+      />
+      <ProductsContainer
+        anchor="hot-drinks"
+        title="Горячие напитки"
+      />
     </div>
   )
 }

@@ -4,11 +4,11 @@ export const ProductsCategories = () => {
   return (
     <div className={styles.wrapper}>
       <ul>
-        <li className="active">Новинки</li>
-        <li>Шаверма</li>
-        <li>Закуски</li>
-        <li>Соусы</li>
-        <li>Горячие напитки</li>
+        <li className="active"><a href="#new-items">Новинки</a></li>
+        <li><a href="#shawerma">Шаверма</a></li>
+        <li><a href="#snacks">Закуски</a></li>
+        <li><a href="#sauces">Соусы</a></li>
+        <li><a href="#hot-drinks">Горячие напитки</a></li>
       </ul>
     </div>
   )
