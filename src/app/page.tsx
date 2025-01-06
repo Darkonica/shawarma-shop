@@ -5,29 +5,54 @@ export const metadata: Metadata = {
   title: 'Shawarma Shop',
 }
 
-export default function Page() {
+export async function fetchProducts() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/products`, {
+    next: { revalidate: 10 }, // Указывает частоту обновления данных (10 секунд)
+  });
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch products');
+  }
+
+  return res.json();
+}
+
+export default async function Page() {
+  const products = await fetchProducts();
+  
+  const productsNewItems = products.filter(item => item.category === 'new-items');
+  const productsShawerma = products.filter(item => item.category === 'shawerma');
+  const productsSnacks = products.filter(item => item.category === 'snacks');
+  const productsSauces = products.filter(item => item.category === 'sauces');
+  const productsHotDrinks = products.filter(item => item.category === 'hot-drinks');
+
   return (
     <div>
       <ProductsCategories />
       <ProductsContainer
         anchor="new-items"
         title="Новинки"
+        data={productsNewItems}
       />
       <ProductsContainer
         anchor="shawerma"
         title="Шаверма"
+        data={productsShawerma}
       />
       <ProductsContainer
         anchor="snacks"
         title="Закуски"
+        data={productsSnacks}
       />
       <ProductsContainer
         anchor="sauces"
         title="Соусы"
+        data={productsSauces}
       />
       <ProductsContainer
         anchor="hot-drinks"
         title="Горячие напитки"
+        data={productsHotDrinks}
       />
     </div>
   )

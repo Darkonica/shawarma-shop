@@ -2,43 +2,21 @@ import { ProductItem } from './ProductItem';
 
 import styles from './styles.module.scss';
 
-export const ProductsContainer = ({ anchor, title }: { anchor: string, title: string }) => {
+export const ProductsContainer = ({ anchor, title, data }: { anchor: string, title: string, data: any }) => {
   return (
     <div className={styles.wrapper}>
       <h2 id={anchor}>{title}</h2>
 
       <div className={styles.productsContainer}>
-        <ProductItem
-          title="Двойная шаверма"
-          image="/images/shawarma.jpg"
-          description="Состав: Курица , свежий огурец, помидоры, морковь по-корейски, капуста салатная или капуста квашеная, красный лук, наш фирменный соус. 440гр."
-          price="360"
-        />
-        <ProductItem
-          title="Двойная шаверма"
-          image="/images/shawarma.jpg"
-          description="Состав: Курица , свежий огурец, помидоры, морковь по-корейски, капуста салатная или капуста квашеная, красный лук, наш фирменный соус. 440гр."
-          price="360"
-        />
-        <ProductItem
-          title="Двойная шаверма"
-          image="/images/shawarma.jpg"
-          description="Состав: Курица , свежий огурец, помидоры, морковь по-корейски, капуста салатная или капуста квашеная, красный лук, наш фирменный соус. 440гр."
-          price="360"
-        />
-        <ProductItem
-          title="Двойная шаверма"
-          image="/images/shawarma.jpg"
-          description="Состав: Курица , свежий огурец, помидоры, морковь по-корейски, капуста салатная или капуста квашеная, красный лук, наш фирменный соус. 440гр."
-          price="360"
-        />
-        <ProductItem
-          title="Двойная шаверма"
-          image="/images/shawarma.jpg"
-          description="Состав: Курица , свежий огурец, помидоры, морковь по-корейски, капуста салатная или капуста квашеная, красный лук, наш фирменный соус. 440гр."
-          price="360"
-        />
-        
+        {data?.map(item => (
+          <ProductItem
+            title={item.name}
+            image={item.image}
+            description={item.description}
+            price={item.price}
+          />
+        )
+        )}
       </div>
     </div>
   )
