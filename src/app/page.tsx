@@ -23,12 +23,12 @@ export default async function Page() {
   const productsNewItems = products.filter(item => item.category === 'new-items');
   const productsShawerma = products.filter(item => item.category === 'shawerma');
   const productsSnacks = products.filter(item => item.category === 'snacks');
-  const productsSauces = products.filter(item => item.category === 'sauces');
   const productsHotDrinks = products.filter(item => item.category === 'hot-drinks');
 
   return (
     <div>
       <ProductsCategories />
+
       <ProductsContainer
         anchor="new-items"
         title="Новинки"
@@ -43,11 +43,6 @@ export default async function Page() {
         anchor="snacks"
         title="Закуски"
         data={productsSnacks}
-      />
-      <ProductsContainer
-        anchor="sauces"
-        title="Соусы"
-        data={productsSauces}
       />
       <ProductsContainer
         anchor="hot-drinks"
